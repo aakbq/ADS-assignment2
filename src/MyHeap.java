@@ -17,6 +17,7 @@ public class MyHeap <T extends Comparable<T>> {
     public T removeRoot(){
         T removed=list.get(0);
         list.set(0, list.get(list.size()-1));
+        list.remove(list.size()-1);
         shiftDown();
         return removed;
     }
